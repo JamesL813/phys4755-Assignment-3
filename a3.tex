@@ -29,7 +29,7 @@ The secant method is similar to Newton's method, only it doesn't require knowing
 The simulation was run with $\delta$ ranging from $10^{-100}$ to $10^{-10}$, anything larger yielded a single value. The results plotted the root value obtained over $\delta$:
 
 \begin{figure}[h!]
-\centerline{\includegraphics [width=3 in] {secant}} \caption{Secant Method} \label{Secant Method}
+\centerline{\includegraphics [width=3 in] {secant}} \caption{Secant Method} \label{secant}
 \end{figure}
 
 Here it's clear that smaller values of delta yield results that are closer to the true root, represented with a gray dotted line. We can also see that there are clear "steps" as we get closer and closer to the root, starting at $1.6$, representing each step the secant method takes to get to the root.
@@ -60,10 +60,32 @@ LU decomposition is used to solve equation 5 for $\bold{\Delta x}$.
 The simulation was run with $\delta$ ranging from $10^{-100}$ to $1$, The results plotted the root value's y component over it's x component with the color gradient representing $\delta$:
 
 \begin{figure}[h!]
-\centerline{\includegraphics [width=3 in] {newton}} \caption{Plot of something really interesting} \label{nameforfigure2}
+\centerline{\includegraphics [width=3 in] {newton}} \caption{Multidimensional Newton Method} \label{newton}
 \end{figure}
 
 Something clearly went wrong in the code here as the root values stay at one point. Ideally we would be able to see the path the algorithm takes to obtain the root with a gradient color as it approaches.
+
+\section{Problem 3a}
+
+Here we look to calculate the value of the following integral using Simpson's
+
+$$ S = \int_{-\infty}^\infty e^{x^2}dx $$
+
+\begin{figure}[h!]
+\centerline{\includegraphics [width=3 in] {simpsons}} \caption{Simpsons method} \label{simpsons}
+\end{figure}
+
+Here we see that, with the exception of two outliers, the data approaches the value of S.
+
+\section{Problem 3b}
+
+$$ S = \int_{-\infty}^\infty e^{x^2}dx $$
+
+\begin{figure}[h!]
+\centerline{\includegraphics [width=3 in] {simpsons_adapt}} \caption{Simpsons method} \label{simpsons_adapt}
+\end{figure}
+
+Here is an interesting result. The plot almost looks like it's bouncing toward a value as a way of converging. It'ss converging to what is presumed to be $S$.
 
 Make sure you include references to documents \cite{thecoursetext} you may have used.
 
