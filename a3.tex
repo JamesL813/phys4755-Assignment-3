@@ -5,9 +5,9 @@
 \usepackage{epstopdf}
 
 \begin{document}
-\title{Title}
+\title{Assignment 3}
 
-\author{Name}
+\author{James Lawton}
 \affiliation {
 Physics Department, Virginia Tech, Blacksburg, Virginia 24061, USA\\
 }
@@ -57,7 +57,7 @@ x_{n+1}=x_n+\frac{f(x_n)}{f(x_n)} \\
 LU decomposition is used to solve equation 5 for $\bold{\Delta x}$.
 
 
-The simulation was run with $\delta$ ranging from $10^{-100}$ to $1$, The results plotted the root value's y component over it's x component with the color gradient representing $\delta$:
+The simulation was run with $\delta$ ranging from $10^{-10}$ to $1$, The results plotted the root value's y component over it's x component with the color gradient representing $\delta$:
 
 \begin{figure}[h!]
 \centerline{\includegraphics [width=3 in] {newton}} \caption{Multidimensional Newton Method} \label{newton}
@@ -67,9 +67,14 @@ Something clearly went wrong in the code here as the root values stay at one poi
 
 \section{Problem 3a}
 
-Here we look to calculate the value of the following integral using Simpson's
+Here we look to calculate the value of the following integral using Simpson's Method.
 
-$$ S = \int_{-\infty}^\infty e^{x^2}dx $$
+\begin{eqnarray}
+S = \int_{-\infty}^\infty e^{x^2}dx
+\label{namefornewequation}
+\end{eqnarray}
+
+This simulation was run with an $n$ value ranging from 1 to 20 which is when there becomes no more visible variation. The $S$ value is then plotted over $n$. 
 
 \begin{figure}[h!]
 \centerline{\includegraphics [width=3 in] {simpsons}} \caption{Simpsons method} \label{simpsons}
@@ -79,7 +84,9 @@ Here we see that, with the exception of two outliers, the data approaches the va
 
 \section{Problem 3b}
 
-$$ S = \int_{-\infty}^\infty e^{x^2}dx $$
+Here we look to find the same S value as in equation 6. This time using the adaptive Simpson's method.
+
+Again, the simulation was run with $\delta$ this time ranging from $10^{-15}$ to $1$, The results plotted the S values against $\delta$
 
 \begin{figure}[h!]
 \centerline{\includegraphics [width=3 in] {simpsons_adapt}} \caption{Simpsons method} \label{simpsons_adapt}
